@@ -44,7 +44,7 @@ class MrpProduction(models.Model):
     @api.model
     def _prepare_production_task(self, workorder):
         stage_obj = self.env['project.task.type']
-        stage = self.env.ref('project.project_stage_data_0')
+        stage = self.env.ref('project.project_stage_data_0', raise_if_not_found=False)
         if not stage:
             stage = stage_obj.search([], order='sequence asc', limit=1)
         product = workorder.production_id.product_id
