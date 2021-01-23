@@ -81,7 +81,8 @@ class MrpProduction(models.Model):
             'name': task_name,
             'project_id': workorder.production_id.project_id.id,
             'stage_id': stage.id,
-            'description': task_descr
+            'description': task_descr,
+            'planned_hours': workorder.duration_expected / 60.0,
         }
 
     @api.multi
