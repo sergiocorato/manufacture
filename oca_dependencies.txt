@@ -5,3 +5,4 @@ purchase-workflow
 sale-workflow
 stock-logistics-workflow
 stock-logistics-warehouse
+purchase-workflow
